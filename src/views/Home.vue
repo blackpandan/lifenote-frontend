@@ -130,7 +130,7 @@ export default {
         this.loading = true;
         let token = localStorage.getItem("token_lifenote")
         let config = {
-          url: `http://127.0.0.1:8000/todos/modify/${pk}`,
+          url: `https://lifenote-api.herokuapp.com/todos/modify/${pk}`,
           method: "DELETE",
           headers: {
             authorization: `Token ${token}`
@@ -176,7 +176,7 @@ export default {
   getProds(){
      let token = localStorage.getItem("token_lifenote");
     let config = {
-      url: "http://127.0.0.1:8000/todos/all",
+      url: "https://lifenote-api.herokuapp.com/todos/all",
       method: "GET",
       headers: {
         authorization: `Token ${token}`
@@ -197,7 +197,7 @@ export default {
     this.load = true;
     let token = localStorage.getItem("token_lifenote")
     let config = {
-      url: "http://127.0.0.1:8000/todos/all",
+      url: "https://lifenote-api.herokuapp.com/todos/all",
       method: "POST",
       data: {
         "title":this.title,
