@@ -45,7 +45,7 @@ data(){
 methods: {
   submitForm(){
     var config = {
-      url: "http://127.0.0.1:8000/user/auth/register",
+      url: "https://lifenote-api.herokuapp.com/user/auth/register",
       method: "POST",
       data: {
         "email": this.email,
@@ -60,7 +60,7 @@ methods: {
       this.message = "account sucessfully created"
       
       var config = {
-        url: "http://127.0.0.1:8000/auth/token",
+        url: "https://lifenote-api.herokuapp.com/auth/token",
         method: "POST",
         data: {
           "username": this.email,
