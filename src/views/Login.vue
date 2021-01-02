@@ -57,7 +57,7 @@ data(){
     this.formValidity = this.$refs.form.validate();
       if(this.formValidity == true){
 
-        var link = "http://127.0.0.1:8000/auth/token";
+        var link = "https://lifenote-api.herokuapp.com/auth/token";
 
         var config = {
           url: link,
@@ -78,7 +78,7 @@ data(){
             localStorage.removeItem("isAuthenticated_lifenote")
             localStorage.setItem("isAuthenticated_lifenote", true);
           }
-          let link = "http://127.0.0.1:8000/user/auth/details"
+          let link = "https://lifenote-api.herokuapp.com/user/auth/details"
           let config = {
             url: link,
             method: "POST",
